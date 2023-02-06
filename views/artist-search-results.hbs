@@ -1,0 +1,39 @@
+<div>
+    {{#each artistData}}
+        <div>
+            <h1>{{this.name}}</h1>
+            <img src="{{this.images.0.url}}" alt="">
+            <a href="/albums/{{id}}">View Albums</a>
+        </div>
+    {{/each}}    
+</div>
+
+
+{{!-- The received data from the API:  {
+  external_urls: { spotify: 'https://open.spotify.com/artist/6kACVPfCOnqzgfEF5ryl0x' },
+  followers: { href: null, total: 5705724 },
+  genres: [ 'arkansas country', 'outlaw country' ],
+  href: 'https://api.spotify.com/v1/artists/6kACVPfCOnqzgfEF5ryl0x',
+  id: '6kACVPfCOnqzgfEF5ryl0x',
+  images: [
+    {
+      height: 640,
+      url: 'https://i.scdn.co/image/ab6761610000e5eb152cf48cf9541c7061570857',
+      width: 640
+    },
+    {
+      height: 320,
+      url: 'https://i.scdn.co/image/ab67616100005174152cf48cf9541c7061570857',
+      width: 320
+    },
+    {
+      height: 160,
+      url: 'https://i.scdn.co/image/ab6761610000f178152cf48cf9541c7061570857',
+      width: 160
+    }
+  ],
+  name: 'Johnny Cash',
+  popularity: 76,
+  type: 'artist',
+  uri: 'spotify:artist:6kACVPfCOnqzgfEF5ryl0x'
+} --}}
